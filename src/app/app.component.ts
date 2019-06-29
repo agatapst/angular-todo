@@ -25,6 +25,10 @@ export class AppComponent {
     return this.DataTodoService.getAllTodos();
   }
 
+  deleteLastTodo() {
+    this.DataTodoService.deleteLastTodo();
+  }
+
 }
 
 

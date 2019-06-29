@@ -18,4 +18,8 @@ export class DataTodoService {
     return this.todos;
   }
 
+  deleteLastTodo(): DataTodoService {
+    this.todos.pop();
+    return this;
+  }
 }
