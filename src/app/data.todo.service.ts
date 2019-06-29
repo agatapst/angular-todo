@@ -22,4 +22,9 @@ export class DataTodoService {
     this.todos.pop();
     return this;
   }
+
+  deleteAll(): DataTodoService {
+    this.todos = [];
+    return this;
+  }
 }

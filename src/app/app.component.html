@@ -6,7 +6,7 @@
 <main>
   <section>
     <button (click)="deleteLastTodo()">Remove last TODO</button>
-    <button>Clear all</button>
+    <button (click)="deleteAll()">Clear all</button>
   </section>
   <section>
     <input placeholder="Your plan" [(ngModel)]="newTodo.title" (keyup.enter)="addNewTodo()">
