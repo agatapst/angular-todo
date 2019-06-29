@@ -6,10 +6,12 @@ import { Todo } from './todo';
 })
 export class DataTodoService {
   todos: Todo[] = [];
+  counter: number = 1;
 
   constructor() { }
 
   addNewTodo(todo: Todo): DataTodoService {
+    todo.id = this.counter++;
     this.todos.push(todo);
     return this;
   }
@@ -19,6 +21,7 @@ export class DataTodoService {
   }
 
   deleteLastTodo(): DataTodoService {
+    this.counter--;
     this.todos.pop();
     return this;
   }

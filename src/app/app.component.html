@@ -14,13 +14,16 @@
   </section>
   <section>
     <ul>
-        <li *ngFor="let todo of todos">
-          <div>
-            <label>{{todo.title}}</label>
-          </div>
-        </li>
-      </ul>
+      <li *ngFor="let todo of todos">
+        <div>
+          Task number {{todo.id}}: {{todo.title}}
+        </div>
+      </li>
+    </ul>
   </section>
 </main>
+<footer *ngIf="todos.length > 0">
+  <span>You have {{todos.length}} {{todos.length === 1 ? 'item' : 'items'}} left</span>
+</footer>
 <router-outlet></router-outlet>
 
