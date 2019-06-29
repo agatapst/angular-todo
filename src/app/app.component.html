@@ -4,6 +4,23 @@
   <h2>{{ subtitle }}</h2>
 </header>
 <main>
-  <input placeholder="Your plan">
+  <section>
+    <button (click)="deleteLastTodo(todo)">Remove last TODO</button>
+    <button>Clear all</button>
+  </section>
+  <section>
+    <input placeholder="Your plan" [(ngModel)]="newTodo.title" (keyup.enter)="addNewTodo()">
+    <button (click)="addNewTodo(todo)">Add</button>
+  </section>
+  <section>
+    <ul>
+        <li *ngFor="let todo of todos">
+          <div>
+            <label>{{todo.title}}</label>
+          </div>
+        </li>
+      </ul>
+  </section>
 </main>
 <router-outlet></router-outlet>
+
