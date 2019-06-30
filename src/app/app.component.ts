@@ -12,25 +12,25 @@ export class AppComponent {
   title = "TODO app";
   subtitle = "What are you up to?";
   newTodo: Todo = new Todo();
-
+  
   constructor(private DataTodoService: DataTodoService) {
   }
-
+  
   addNewTodo() {
     if (this.newTodo.title) {
       this.DataTodoService.addNewTodo(this.newTodo);
       this.newTodo = new Todo();
     }
   }
-
+  
   get todos() {
     return this.DataTodoService.getAllTodos();
   }
-
+  
   deleteLastTodo() {
     this.DataTodoService.deleteLastTodo();
   }
-
+  
   deleteAll() {
     this.DataTodoService.deleteAll();
   }
