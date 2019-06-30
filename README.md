@@ -6,8 +6,8 @@ An app which helps you to organize your plans better.
 ## Table of Contents
 - Requirements
 - Setup
+- General info
 - Technologies
-- Status
 - Additional info
 
 ### Requirements
