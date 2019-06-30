@@ -6,6 +6,7 @@
 header, main, footer {
     font-family: 'Rubik Mono One', sans-serif;
     text-align: center;
+    width: 100%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +17,7 @@ header, main, footer {
     font-weight: normal;
     margin-top: 5px;
     margin-bottom: 10px;
+    width: 100%;
     max-width: 600px;
 }
 
@@ -28,7 +30,8 @@ header, main, footer {
 }
 
 .cover-art {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .button {
@@ -36,6 +39,7 @@ header, main, footer {
     font-family: 'Rubik Mono One', sans-serif;
     color: $theme-color;
     background: white;
+    margin: 0;
     padding: 10px;
     border: $main-border-width solid $theme-color;
 
@@ -68,6 +72,7 @@ header, main, footer {
 .todo-input {
     box-sizing: border-box;
     width: 70%;
+    margin: 0;
     padding: 10px;
     font-size: 1.2em;
     font-family: 'Rubik Mono One', sans-serif;
@@ -102,7 +107,8 @@ header, main, footer {
     margin-top: 40px;
     text-align: center;
     .success-art {
-        width: 400px;
+        width: 100%;
+        max-width: 400px;
         margin-top: -40px;
     }
 }
