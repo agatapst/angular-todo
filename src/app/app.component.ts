@@ -10,15 +10,17 @@ import { Todo } from './todo';
 })
 export class AppComponent {
   title = "TODO app";
-  subtitle = "What are you up to?"
+  subtitle = "What are you up to?";
   newTodo: Todo = new Todo();
 
   constructor(private DataTodoService: DataTodoService) {
   }
 
   addNewTodo() {
-    this.DataTodoService.addNewTodo(this.newTodo);
-    this.newTodo = new Todo();
+    if (this.newTodo.title) {
+      this.DataTodoService.addNewTodo(this.newTodo);
+      this.newTodo = new Todo();
+    }
   }
 
   get todos() {
